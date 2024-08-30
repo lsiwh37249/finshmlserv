@@ -11,4 +11,4 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 #COPY . /code/
  
-CMD ["uvicorn", "src.finshmlserv.main:app", "--host", "0.0.0.0", "--port", "8765"]
+CMD ["uvicorn", "src.finshmlserv.main:app", "--host", "0.0.0.0", "--port", "8080"]
