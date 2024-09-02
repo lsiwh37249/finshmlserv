@@ -25,7 +25,6 @@ def fish(length: float, weight:float):
     Returns:
         dict: 물고기 종류를 담은 딕셔너리
     """
-    fish_clase = ""
     ### 모델 불러오기
 #    with open("/home/diginori/code/fishmlserv/note/model.pkl", "rb") as f:
     path = get_model_path()
@@ -33,7 +32,7 @@ def fish(length: float, weight:float):
         fish_model = pickle.load(f)
     prediction = fish_model.predict([[length, weight]])
 
-#    fish_class = "몰라"
+    fish_class = " "
     if prediction[0] == 1:
         fish_class = "도미"
     else:
