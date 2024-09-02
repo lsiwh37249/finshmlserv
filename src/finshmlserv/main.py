@@ -1,7 +1,7 @@
 from typing import Union
 from fastapi import FastAPI
 import pickle
-from src.finshmlserv.model.manager import get_model_path
+from finshmlserv.model.manager import get_model_path
 #from model.manager import get_model_path
 app = FastAPI()
 
