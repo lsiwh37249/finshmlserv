@@ -42,6 +42,18 @@ BUG_REPORT_URL="https://bugs.debian.org/"
 
 # 다시 호스트OS(WSL) 로 exit
 root@7244097edb66:/code# exit
+
+# docker log 확인
+$ sudo docker logs -f 1610
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     172.18.0.1:44054 - "GET / HTTP/1.1" 200 OK
+INFO:     172.18.0.1:44054 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.18.0.1:44054 - "GET /docs HTTP/1.1" 200 OK
+INFO:     172.18.0.1:44054 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     172.18.0.1:44042 - "GET /fish?length=44&weight=44 HTTP/1.1" 200 OK
 ```
 
 - fly
