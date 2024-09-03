@@ -1,13 +1,13 @@
 [project]
 name = "finshmlserv"
-version = "0.8.1"
+version = "0.8.2"
 description = "Serving Machine Learning Model - using sklearn(KNeighborsClassifier) using FastApi, Fly.io"
 authors = [
     {name = "lsiwh37249", email = "lsiwh37249@gmail.com"},
 ]
 dependencies = [
 ]
-requires-python = "==3.8.19"
+requires-python = ">=3.8"
 readme = "README.md"
 license = {text = "MIT"}
 
