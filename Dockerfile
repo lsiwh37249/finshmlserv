@@ -1,4 +1,5 @@
-FROM python:3.8
+FROM datamario24/python311scikitlearn-fastapi:1.0.0
+#FROM python:3.8
 #FROM python:3.11.9-alpine3.20
  
 WORKDIR /code
@@ -13,7 +14,7 @@ COPY src/finshmlserv/main.py /code/
 
 #ADD git@github.com:moby/buildkit.git#v0.14.1:docs /buildkit-docs
 
-RUN pip install --no-cache-dir --upgrade  git+https://github.com/lsiwh37249/finshmlserv.git@0.7/MANIFEST
+RUN pip install --no-cache-dir --upgrade  git+https://github.com/lsiwh37249/finshmlserv.git@0.8/hub
  
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
 
