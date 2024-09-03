@@ -1,12 +1,13 @@
 [project]
 name = "finshmlserv"
-version = "0.8.3"
+version = "0.8.5"
 description = "Serving Machine Learning Model - using sklearn(KNeighborsClassifier) using FastApi, Fly.io"
 authors = [
     {name = "lsiwh37249", email = "lsiwh37249@gmail.com"},
 ]
 dependencies = [
     "typer>=0.12.5",
+    "fire>=0.6.0",
 ]
 requires-python = ">=3.8"
 readme = "README.md"
@@ -30,3 +31,4 @@ note = [
 finshmlserv-ping = 'finshmlserv.cli:ping'
 get-model-path = 'finshmlserv.cli:get_model_path'
 prediction = "finshmlserv.cli:prediction"
+prediction_f = "finshmlserv.cli_f:prediction_f"
