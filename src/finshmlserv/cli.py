@@ -29,9 +29,5 @@ def run_prediction(
 
     print(fish_class)
     
-#@app.command()
 def prediction():
     typer.run(run_prediction)
-
-#if __name__ == "__main__":
-#    app()
