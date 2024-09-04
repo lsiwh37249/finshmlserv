@@ -6,8 +6,11 @@ authors = [
     {name = "lsiwh37249", email = "lsiwh37249@gmail.com"},
 ]
 dependencies = [
-#    "typer>=0.12.5",
-#    "fire>=0.6.0",
+    #    "typer>=0.12.5",
+    #    "fire>=0.6.0",
+    "pandas>=2.0.3",
+    "pyarrow>=17.0.0",
+    "fastparquet>=2024.2.0",
 ]
 requires-python = ">=3.8"
 readme = "README.md"

@@ -54,6 +54,12 @@ INFO:     172.18.0.1:44054 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 INFO:     172.18.0.1:44054 - "GET /docs HTTP/1.1" 200 OK
 INFO:     172.18.0.1:44054 - "GET /openapi.json HTTP/1.1" 200 OK
 INFO:     172.18.0.1:44042 - "GET /fish?length=44&weight=44 HTTP/1.1" 200 OK
+
+#Nginx
+$ sudo docker build --no-cache -t ml-lb:1.5.0 LB/
+$ sudo docker run -d -p 8765:80 --link ml-l --link ml-2 --name lb-2  ml-lb:1.5.0
+
+
 ```
 
 - fly
