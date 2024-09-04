@@ -1,4 +1,5 @@
-FROM datamario24/python311scikitlearn-fastapi:1.0.0
+FROM lsiwh37249/finshmlserv:0.8.5
+#FROM datamario24/python311scikitlearn-fastapi:1.0.0
 #FROM python:3.8
 #FROM python:3.11.9-alpine3.20
  
@@ -14,9 +15,9 @@ COPY src/finshmlserv/main.py /code/
 
 #ADD git@github.com:moby/buildkit.git#v0.14.1:docs /buildkit-docs
 
-RUN pip install --no-cache-dir --upgrade  git+https://github.com/lsiwh37249/finshmlserv.git@0.8/hub
+#모델 서빙 역할(의존성의 위 BASE 이미지에서 모두 설치 했다)
+#RUN pip install --no-cache-dir --upgrade  git+https://github.com/lsiwh37249/finshmlserv.git@0.8/hub
+RUN pip install git+https://github.com/lsiwh37249/finshmlserv.git@1.0.0/k
  
+#모델 서빙을 위해 API 구동을 위한 FASTAPI RUN
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
-
-
-
