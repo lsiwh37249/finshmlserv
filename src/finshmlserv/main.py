@@ -5,6 +5,14 @@ from finshmlserv.model.manager import get_model_path
 
 app = FastAPI()
 
+def get_model():
+    path = get_model_path()
+    with open(path, "rb") as f:
+        fish_model = pickle.load(f)
+    return fish_model
+
+fish_model = get_model()
+
 @app.get("/")
 def read_root():
     return {"Hello": "world"}
@@ -27,9 +35,6 @@ def fish(length: float, weight:float):
     """
     ### 모델 불러오기
 #    with open("/home/diginori/code/fishmlserv/note/model.pkl", "rb") as f:
-    path = get_model_path()
-    with open(path, "rb") as f: 
-        fish_model = pickle.load(f)
     prediction = fish_model.predict([[length, weight]])
 
     fish_class = " "
