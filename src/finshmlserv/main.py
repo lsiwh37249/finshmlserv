@@ -42,7 +42,7 @@ def fish(length: float, weight:float, neighbor:int):
     if prediction[0] == 1:
         fish_class = "도미"
     else:
-        fish_class = "우럭"
+        fish_class = "빙어"
 
     return {    
                 "prediction": fish_class,
